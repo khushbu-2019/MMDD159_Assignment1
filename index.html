@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pacman</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Pacman">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <!---------NAVIGATION-------->
+            <nav class="stroke">
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#highscores">HIGH SCORES</a></li>
+                    <li><a href="#howtoplay">HOW TO PLAY</a></li>
+                    <li><a href="#players">PLAYERS</a></li>
+                </ul>
+            </nav>
+
+        <section class="home" id="home">
+            <img src="images/Pac_man_logo.png" class="pacmanlogo"> 
+            <br>
+            <img class="pacman" id="transformed-left" src="images/Pacman.png"  width="60px" height="60px" >
+            <img id="transformed-left" src="images/Pinky.png" width="60px" height="60px">
+            <img id="transformed-left" src="images/Inky.png" width="60px" height="60px">
+            <img id="transformed-left" src="images/Blinky.png" width="60px" height="60px">
+            <img id="transformed-left" src="images/Clyde.png" width="60px" height="60px">
+            <h2 class="blink" id="insert">INSERT COINS</h2>
+        </section>
+
+        <!---------------HIGHSCORES SECTION----------->
+        <section class="highscores" id="highscores">
+            <h1>READY!</h1>
+            <h2>THE 10 BEST PLAYERS</h2>
+            <table align="center">
+                <tr>
+                    <th>RANK</th>
+                    <th>SCORE</th>
+                    <th>INITIALS</th>
+                </tr>
+                <tr class="orange">
+                    <td>1ST</td>
+                    <td>10,000</td>
+                    <td>JRB</td>
+                </tr>
+                <tr class="red">
+                    <td>2ND</td>
+                    <td>9,950</td>
+                    <td>LAB</td>
+                </tr>
+                <tr class="skyblue">
+                    <td>3RD</td>
+                    <td>9,000</td>
+                    <td>CJB</td>
+                </tr>
+                <tr class="pink"> 
+                    <td>4TH</td>
+                    <td>8,750</td>
+                    <td>KED</td>
+                </tr>
+                <tr class="orange">
+                    <td>5TH</td>
+                    <td>8,500</td>
+                    <td>JBB</td>
+                </tr>
+                <tr class="red">
+                    <td>6TH</td>
+                    <td>7,750</td>
+                    <td>SBB</td>
+                </tr>
+                <tr class="skyblue">
+                    <td>7TH</td>
+                    <td>7,250</td>
+                    <td>MLB</td>
+                </tr>
+                <tr class="pink">
+                    <td>8TH</td>
+                    <td>6,850</td>
+                    <td>AGD</td>
+                </tr>
+                <tr class="orange">
+                    <td>9TH</td>
+                    <td>6,500</td>
+                    <td>KAD</td>
+                </tr>
+                <tr class="red">
+                    <td>10TH</td>
+                    <td>6,250</td>
+                    <td>BOB</td>
+                </tr>
+            </table>
+        </section>
+
+        <!---------------HOW TO PLAY SECTION------------------>
+        <section class="howtoplay" id="howtoplay">
+            <img id="transformed-right" src="images/Pacman.png" width="60px" height="60px">
+            <img id="transformed-right" src="images/Eaten.png" width="60px" height="60px">
+            <img id="transformed-right" src="images/Eaten.png" width="60px" height="60px">
+            <img id="transformed-right" src="images/Eaten.png" width="60px" height="60px">
+            <img id="transformed-right" src="images/Eaten.png" width="60px" height="60px">
+            <h2>HOW TO PLAY</h2>
+            <p class="yellow">SIMPLY SCORE AS MANY POINTS AS YOU</p>
+                <p id="howtoplay"> can eating the small dots all around<br> 
+                the maze. 10 points per dot (240 of <br>
+                them). Big points come when you eat 1 <br>
+                of the 4 Big of flashing dots called <br>
+                Energizers worth 50 points located in <br>
+                each corner of the maze. 
+            </p>
+        </section>
+
+        <!--------------PLAYERS SECTION--------------->
+        <div class="players" id="players">
+            <h2>PLAYERS</h2>
+            <h2>CHARACTER   /   NICKNAME</h2>
+            <div class="grid-container">
+                    <img class="grid-item" id="ghost" src="images/Blinky.png" width="50px" height="50px">
+                    <div class="grid-item">-SHADOW</div>
+                    <div class="grid-item">"BLINKY"</div>
+                    <img class="grid-item" id="ghost" src="images/Pinky.png" width="50px" height="50px">                    
+                    <div class="grid-item">-SPEEDY</div>
+                    <div class="grid-item">"PINKY"</div>
+                    <img class="grid-item" id="ghost" src="images/Inky.png" width="50px" height="50px">
+                    <div class="grid-item">-BASHFUL</div>
+                    <div class="grid-item">"INKY"</div>
+                    <img class="grid-item" id="ghost" src="images/Clyde.png" width="50px" height="50px">
+                    <div class="grid-item">-POKEY</div>
+                    <div class="grid-item">"CLYDE"</div>
+            </div>  
+            <table class="points" align="center">
+                <tr>
+                    <td><h2>200 PTS </h2></td>
+                    <td>
+                        <img src="images/Eaten.png" width="60px" height="60px">
+                        <img src="images/Eaten.png" width="60px" height="60px">
+                        <img src="images/Eaten.png" width="60px" height="60px">
+                    </td>
+                </tr>
+                <tr>
+                    <td><h2 id="points">50 PTS</h2></td>
+                    <td><div class="square"></div></td>
+                </tr>
+                <tr>
+                    <td><h2 id="points">10 PTS</h2></td>
+                    <td><div class="square" id="small"></div></td>
+                </tr>
+            </table>
+        </div>
+
+        <!--------------FOOTER------------->
+        <footer><p>THIS SITE HAS NO AFFILIATION WITH THE ACTUAL PACMAN GAME</p></footer>
+        
+        </div>
+    </body>
+</html>
+

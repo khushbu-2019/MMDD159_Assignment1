@@ -1,0 +1,277 @@
+html {
+    font-family: 'Press Start 2P', cursive;
+    background-color: black;
+    text-align: center;
+}
+body {
+    margin: 0; 
+}
+.container {
+    width: 100%;
+    margin: auto;
+}
+
+h1 {
+    color: gold;
+}
+
+h2 {
+    color: white;
+}
+
+th {
+    color: white;
+}
+
+p {
+    color:white;
+    padding-left: 200px;
+    padding-right: 200px;
+    
+}
+
+/********* NAVIGATION **********/
+nav {
+width: 80%;
+margin: 0 auto;
+padding: 50px 0;
+
+}
+nav ul {
+list-style: none;
+text-align: center;
+}
+nav ul li {
+display: inline-block;
+}
+nav ul li a {
+display: block;
+padding: 15px;
+text-decoration: none;
+color: white;
+font-weight: 800;
+margin: 0 10px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+transition: all .5s;
+}
+
+nav ul li a:hover {
+color: yellow;
+transition: all 0.5s;
+}
+
+/******* Navigation Stroke */
+nav.stroke ul li a,
+nav.fill ul li a {
+position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+width: 0%;
+content: '.';
+color: transparent;
+background: yellow;
+height: 1px;
+}
+nav.stroke ul li a:hover:after {
+width: 100%;
+}
+
+/***Dotted Line****/
+section::after{
+    display:block;
+    content:"";
+    border: 2px solid gold; 
+    border-style: dotted;
+}
+
+/*********************HOME SECTION*************************/
+
+/*****Pacman Logo****/
+.pacmanlogo {
+    align-content: center;
+    padding-bottom: 90px;
+    padding-top: 50px; /**screen stretch */
+}
+
+.home {
+    display: flexbox;
+    flex-direction: row;
+    justify-content: center;
+    /**padding-left: 500px;**/
+    padding-bottom: 100px;
+}
+
+/*****PACMAN FLIP***/
+
+.pacman {
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+/***PACMAN ANIMATION #1****/
+
+#transformed-left {
+    position: relative;
+    animation: mymove 3s;
+    animation-iteration-count: infinite;
+}
+  
+  @keyframes mymove {
+    to {left: -900px;}
+    from {left: 1200px;}
+}
+
+/**** INSERT COINS BLINKING ANIMATION ******/
+
+.blink {
+    padding-top: 60px;
+    animation: blink 1s linear infinite;
+    padding-bottom: 100px;
+}
+
+@keyframes blink{
+0%{opacity: 0;}
+50%{opacity: 1}
+100%{opacity: 1;}
+}
+
+/******************HIGH SCORES SECTION ***************/
+
+table {
+    padding-bottom: 150px;
+}
+
+td, th {
+    padding-left: 100px;
+    padding-bottom: 10px;
+}
+
+/****ORGANIZED USING nth CHILD ****/
+
+tr:nth-child(4n+2) {
+    color: orange;
+}
+
+tr:nth-child(4n+3) { 
+    color:red;
+}
+
+tr:nth-child(4n+4) {
+    color: #00f8f8;
+}
+
+tr:nth-child(4n+5) {
+    color:#ff60b0;
+}
+
+/****************HOW TO PLAY SECTION************/
+
+#howtoplay {
+    padding-bottom: 100px;
+}
+
+/****FIRST LINE OF HOW TO PLAY SECTION***/
+.yellow {
+    color:gold;
+}
+
+/****GHOST ANIMATION*****/
+
+#transformed-right {
+    padding-top: 100px;
+    position: relative;
+    animation: move 3s;
+    animation-iteration-count: infinite;
+}
+  
+@keyframes move {
+    from {left: -900px;}
+    to {left: 900px;}
+}
+
+/****************PLAYERS SECTION****************/  
+
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  align-content: center;
+}
+
+.grid-item {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.grid-item:nth-of-type(1){
+    color:red;
+}
+.grid-item:nth-of-type(2){
+    color:red;
+}
+.grid-item:nth-of-type(3){
+    color:#ff60b0;
+}.grid-item:nth-of-type(4){
+    color:#ff60b0;
+}
+.grid-item:nth-of-type(5){
+    color:#00f8f8;
+}.grid-item:nth-of-type(6){
+    color:#00f8f8;
+}
+.grid-item:nth-of-type(7){
+    color:orange;
+}.grid-item:nth-of-type(8){
+    color:orange;
+}
+
+/****GHOST FLIP*****/
+
+#ghost {
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+/***SQAURES***/
+
+.square {
+    height: 50px;
+    width: 50px;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+#small {
+    height:20px;
+    width:20px;
+    background-color: yellow;
+}
+
+.points {
+    padding: 50px 100px 50px 100px;
+}
+
+/***********FOOTER************/
+
+footer {
+    padding-top: 20px;
+    color:white;
+    font-size: 10pt;
+}
