@@ -123,11 +123,11 @@ section::after{
 
 #transformed-left {
     position: relative;
-    animation: mymove 3s;
+    animation: moveleft 3s;
     animation-iteration-count: infinite;
 }
   
-  @keyframes mymove {
+  @keyframes moveleft {
     to {left: -900px;}
     from {left: 1200px;}
 }
@@ -150,6 +150,9 @@ section::after{
 
 table {
     padding-bottom: 150px;
+    text-align:center; 
+    margin-left:auto; 
+    margin-right:auto; 
 }
 
 td, th {
@@ -191,11 +194,11 @@ tr:nth-child(4n+5) {
 #transformed-right {
     padding-top: 100px;
     position: relative;
-    animation: move 3s;
+    animation: moveright 3s;
     animation-iteration-count: infinite;
 }
   
-@keyframes move {
+@keyframes moveright {
     from {left: -900px;}
     to {left: 900px;}
 }
